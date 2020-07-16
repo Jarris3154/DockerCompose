@@ -1,0 +1,11 @@
+version: "3.1"
+services:
+  aria2-ui:
+    image: wahyd4/aria2-ui
+    ports:
+      - "6800"
+      - "80"
+      - "443"
+    volumes:
+      - /opt/docker/projects/aria2/conf/key:/root/conf/key
+    restart: always

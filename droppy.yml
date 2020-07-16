@@ -1,0 +1,10 @@
+version: "3.1"
+services:
+  droppy:
+    image: silverwind/droppy
+    ports:
+      - "8989:8989"
+    volumes:
+      - /opt/docker/projects/droppy/config:/config
+      - /opt/docker/projects/droppy/files:/files
+    restart: always

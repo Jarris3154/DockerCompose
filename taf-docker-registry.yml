@@ -1,0 +1,7 @@
+version: "3.1"
+services:
+  taf-docker-registry:
+    image: registry
+    ports:
+      - "5000:5000"
+    restart: always

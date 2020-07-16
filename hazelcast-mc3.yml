@@ -1,0 +1,7 @@
+version: "3.1"
+services:
+  hazelcast-mc3:
+    image: hazelcast/management-center:3.12.7
+    ports:
+      - "10080:8080"
+    restart: always
