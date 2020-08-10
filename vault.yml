@@ -1,0 +1,12 @@
+version: "3.1"
+services:
+  dev-vault:
+    image: vault
+    ports:
+      - "8200:8200"
+    volumes:
+      - /mnt/d/docker/volumes/vault/logs:/vault/logs
+      - /mnt/d/docker/volumes/vault/file:/vault/file
+    environment:
+        VAULT_DEV_ROOT_TOKEN_ID: myroot
+    restart: always
