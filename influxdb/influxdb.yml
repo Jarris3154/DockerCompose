@@ -1,7 +1,7 @@
 version: "3.1"
 services:
   influxdb:
-    image: influxdb
+    image: influxdb:alpine
     ports:
       - "8086:8086"
     volumes:
