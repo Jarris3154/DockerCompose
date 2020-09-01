@@ -1,0 +1,15 @@
+version: "3.1"
+services:
+  lychee:
+    image: 80x86/lychee
+    volumes: 
+      - /opt/volumes/lychee/conf:/conf
+      - /opt/volumes/lychee/uploads:/uploads
+    environment:
+      PHP_TZ: Asia/Shanghai
+      PHP_MAX_EXECUTION_TIME: 600
+      DB_CONNECTION: sqlite
+      DB_DATABASE: /conf/lychee.db
+    ports:
+      - 8080:80
+    restart: always
