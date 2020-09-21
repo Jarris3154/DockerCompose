@@ -7,5 +7,5 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - /opt/docker/projects/aria2/conf/key:/root/conf/key
+      - ~/docker/volumes/aria2/conf/key:/root/conf/key
     restart: always

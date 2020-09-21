@@ -5,6 +5,6 @@ services:
     ports:
       - "8989:8989"
     volumes:
-      - /opt/docker/projects/droppy/config:/config
-      - /opt/docker/projects/droppy/files:/files
+      - ~/docker/volumes/droppy/config:/config
+      - ~/docker/volumes/droppy/files:/files
     restart: always

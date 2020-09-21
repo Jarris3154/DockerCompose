@@ -7,10 +7,10 @@ services:
     depends_on:
       - sonar-postgres
     volumes:
-      - /opt/docker/projects/sonarqube/data:/opt/sonarqube/data
-      - /opt/docker/projects/sonarqube/logs:/opt/sonarqube/logs
-      - /opt/docker/projects/sonarqube/extensions:/opt/sonarqube/extensions
-      - /opt/docker/projects/sonarqube/conf:/opt/sonarqube/conf
+      - ~/docker/volumes/sonarqube/data:/opt/sonarqube/data
+      - ~/docker/volumes/sonarqube/logs:/opt/sonarqube/logs
+      - ~/docker/volumes/sonarqube/extensions:/opt/sonarqube/extensions
+      - ~/docker/volumes/sonarqube/conf:/opt/sonarqube/conf
     environment:
       SONARQUBE_JDBC_USERNAME: sonar
       SONARQUBE_JDBC_PASSWORD: sonar
@@ -21,7 +21,7 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - /opt/docker/projects/postgres/data:/var/lib/postgresql/data
+      - ~/docker/volumes/postgres/data:/var/lib/postgresql/data
     environment:
       POSTGRES_USER: sonar
       POSTGRES_PASSWORD: sonar

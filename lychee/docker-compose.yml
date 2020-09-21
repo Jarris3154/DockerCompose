@@ -3,8 +3,8 @@ services:
   lychee:
     image: 80x86/lychee
     volumes: 
-      - /opt/volumes/lychee/conf:/conf
-      - /opt/volumes/lychee/uploads:/uploads
+      - ~/docker/volumes/lychee/conf:/conf
+      - ~/docker/volumes/lychee/uploads:/uploads
     environment:
       PHP_TZ: Asia/Shanghai
       PHP_MAX_EXECUTION_TIME: 600

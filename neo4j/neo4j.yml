@@ -6,6 +6,6 @@ services:
       - "7474:7474"
       - "7687:7687"
     volumes:
-      - /opt/docker/projects/neo4j:/data
+      - ~/docker/volumes/neo4j:/data
     restart: always
       
